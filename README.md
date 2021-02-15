@@ -12,3 +12,6 @@
     • Open the project on the IDE (E.g. IntelliJ)
     • Wait for the system to download the dependencies
     • Click to execute it from the file "RunTests.java"
+    
+### Pre requisites
+    Java 1.8 or higher with the JAVA_HOME enviroment variable configured.
