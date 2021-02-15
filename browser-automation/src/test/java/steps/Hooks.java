@@ -35,7 +35,7 @@ public class Hooks
         }
     }
 
-
+    @After
     public void teardown() {
         if (driver != null) {
             driver.quit();
