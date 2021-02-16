@@ -15,45 +15,49 @@ public class ValidaPrecoPageObjects
     //Page elements
     @FindBy(id = "onesignal-slidedown-cancel-button")
     protected WebElement buttonDenyNotifications;
-    public WebElement getButtonDenyNotifications() {
-        return wait.until(ExpectedConditions.visibilityOf(buttonDenyNotifications));
-    }
 
-    @FindBy(xpath = "/html/body/header/nav/div/div/div[1]/a[3]")
+    @FindBy(xpath = "//a[contains(text(),'Por professor')]")
     protected WebElement buttonPorProfessor;
-    public WebElement getButtonPorProfessor() {
-        return wait.until(ExpectedConditions.visibilityOf(buttonPorProfessor));
-    }
 
-    @FindBy(xpath = "/html/body/div[1]/div/div/section[1]/header/div/div/form/input")
+    @FindBy(xpath = "//input[@placeholder='Filtrar']")
     protected WebElement filterBy;
-    public WebElement getFilterBy() {
-        return wait.until(ExpectedConditions.visibilityOf(filterBy));
-    }
 
-    //list
     @FindBy(className = "card-prod-details")
     protected List<WebElement> buttonDetailsOnTheList;
-    public List<WebElement> getButtonDetailsOnTheList() {
-        return wait.until(ExpectedConditions.visibilityOfAllElements(buttonDetailsOnTheList));
-    }
 
     @FindBy(className = "card-prod-price")
     protected List<WebElement> priceOfTheCourseOnTheList;
-    public List<WebElement> getPriceOfTheCourseOnTheList() {
-        return wait.until(ExpectedConditions.visibilityOfAllElements(priceOfTheCourseOnTheList));
-    }
 
     @FindBy(className = "value")
     protected WebElement priceOfTheDetails;
-    public WebElement getPriceOfTheDetails() {
-        return wait.until(ExpectedConditions.visibilityOf(priceOfTheDetails));
-    }
 
+    //Constructor
     public ValidaPrecoPageObjects(WebDriver driver, WebDriverWait wait)
     {
         this.driver = driver;
         this.wait = wait;
         PageFactory.initElements(driver, this);
     }
+
+    //Methods
+    public WebElement getButtonDenyNotifications() {
+        return wait.until(ExpectedConditions.visibilityOf(buttonDenyNotifications));
+    }
+
+    public WebElement getButtonPorProfessor() {
+        return wait.until(ExpectedConditions.visibilityOf(buttonPorProfessor));
+    }
+    public WebElement getFilterBy() {
+        return wait.until(ExpectedConditions.visibilityOf(filterBy));
+    }
+    public List<WebElement> getButtonDetailsOnTheList() {
+        return wait.until(ExpectedConditions.visibilityOfAllElements(buttonDetailsOnTheList));
+    }
+    public List<WebElement> getPriceOfTheCourseOnTheList() {
+        return wait.until(ExpectedConditions.visibilityOfAllElements(priceOfTheCourseOnTheList));
+    }
+    public WebElement getPriceOfTheDetails() {
+        return wait.until(ExpectedConditions.visibilityOf(priceOfTheDetails));
+    }
+
 }

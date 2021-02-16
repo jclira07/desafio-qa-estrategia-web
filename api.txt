@@ -1,0 +1,24 @@
+
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("application/json");
+RequestBody body = RequestBody.create(mediaType, "{\r\n  \"name\": \"Joao Lira\",\r\n  \"email\": \"automation.test.97@gmail.com\",\r\n  \"password\": \"joaotester\"\r\n}");
+Request request = new Request.Builder()
+  .url("http://54.174.86.218/auth/register")
+  .method("POST", body)
+  .addHeader("Content-Type", "application/json")
+  .build();
+Response response = client.newCall(request).execute();
+
+
+
+{
+    "user": {
+        "_id": "602a18d5127b1315ddb39e4c",
+        "name": "Joao Lira",
+        "email": "automation.test.97@gmail.com",
+        "createdAt": "2021-02-15T06:46:45.133Z",
+        "__v": 0
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmExOGQ1MTI3YjEzMTVkZGIzOWU0YyIsImlhdCI6MTYxMzM3MTYwNSwiZXhwIjoxNjEzNDU4MDA1fQ.d0p4fEgfIlWIdMECrgWSXqQDYFebw5WIwYIl89607mU"
+}

@@ -16,7 +16,7 @@ public class ValidaPrecosPorProfessorSteps
     }
 
     @Dado ("que nego o popup de notificações")
-    public void queNegoOPopupDeNotificacoes()
+    public void queNegoOPopupDeNotificacoes() throws Exception
     {
         pageActions.denyNotificationPopup();
     }

@@ -12,14 +12,6 @@ public class Hooks
 {
     public static WebDriver driver;
 
-    public Hooks() {
-    }
-
-    @BeforeClass
-    public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-    }
-
     @Before
     public void setup() throws Exception{
         try {

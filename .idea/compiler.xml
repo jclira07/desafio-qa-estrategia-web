@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="browser-automation" />
+        <module name="api-automation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-automation" target="15" />
       <module name="browser-automation" target="15" />
     </bytecodeTargetLevel>
   </component>
