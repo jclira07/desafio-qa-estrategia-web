@@ -1,0 +1,34 @@
+Bug ID: 1
+Título: Curso com valor promocional diferente do exibido na lista.  
+Descrição: O valor promocional do curso exibido dentro da página de detalhes, é diferente do valor exibido na lista anterior.
+Passo-a-passo: 
+    1) Navegar até a lista de cursos da professora Ena Loiola
+    2) Encontrar o curso "Assinatura Delta 2 Anos - Boleto à vista"
+    3) Observar o valor exibido
+    4) Acessar a página de detalhes do curso e comparar os valores
+
+Resultado Esperado: O valores são iguais em ambas as exibições.
+Resultado Obtido: O valor listado por fora é diferente do valor dos detalhes.
+
+=======================
+Bug ID: 2
+Título: Problemas com o arredondamento do valor total do curso.  
+Descrição: Ao calcular por multiplicação o preço final do curso parcelado, o resultado tem diferenças de arredondamento em relação ao valor exibido dentro da página de detalhes do curso.
+Passo-a-passo: 
+    1) Navegar até a lista de cursos da professora Ena Loiola
+    2) Encontrar o curso "Conhecimentos Específicos p/ Prefeitura de Teresópolis-RJ (Professor - Língua Inglesa) - Pós-Edital"
+    3) Calcular o preço, multiplicando as parcelas
+    4) Acessar a página de detalhes do curso e comparar os valores
+
+Resultado Esperado: O valor multiplicado é igual ao valor dos detalhes.
+Resultado Obtido: O valor multiplicado está diferente por questões de arredondamento.
+
+Observações: Isso também ocorre com os cursos:
+    Conhecimentos Específicos p/ Prefeitura de Teresópolis-RJ (Professor - Língua Inglesa) - Pós-Edital
+    Conhecimentos Específicos p/ SEED-ES (Professor - Inglês) 2021 - Pré-Edital
+    Conhecimentos Específicos p/ SEED-SE (Professor - Inglês) - 2021 - Pré-Edital
+    Inglês p/ CBM-SE (Oficial) Com Videoaulas - 2020
+    Inglês p/ Concursos - Curso Regular - 2021
+    Inglês p/ SEED-PR (Professor - Língua Inglesa) Com Videoaulas - 2020
+    Inglês p/ SEEDUC-RJ (Professor - Inglês) 2021 - Pré-Edital
+    Inglês p/ SEFAZ-ES (Auditor Fiscal) - FGV - Pré-Edital
